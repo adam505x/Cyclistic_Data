@@ -1,8 +1,5 @@
 ipykernel
-jupyter
 kagglehub
 pandas
 matplotlib
-seaborn
-
 
