@@ -1,4 +1,4 @@
-# NAMUS Missing Persons Analysis
+# NAMUS Cyclistic Data Project
 COMP30770 - Programming for Big Data
 
 ## Setup Instructions
