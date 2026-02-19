@@ -2,4 +2,5 @@ ipykernel
 pandas
 matplotlib
 python-dotenv
-
+psutil
+requests
