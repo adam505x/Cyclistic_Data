@@ -11,10 +11,7 @@ RESPONSIBILITY:
 
 USAGE:
     python run.py                   # Run full pipeline (2020-2022)
-    python run.py --skip-download   # Skip download, re-run linker only
-    python run.py --steps 0         # Run a single step
-    python run.py --help
-
+    
 STEPS:
     0 - Download & extract raw data from AWS S3
     1 - Link all CSVs into one combined file
@@ -22,7 +19,6 @@ STEPS:
 
 import sys
 import os
-import argparse
 import time
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
@@ -35,31 +31,8 @@ STEPS = {
 }
 
 
-def parse_args():
-    parser = argparse.ArgumentParser(
-        description="Cyclistic Data Preparation Pipeline (Steps 0 & 1)"
-    )
-    parser.add_argument(
-        "--steps",
-        nargs="+",
-        type=int,
-        choices=STEPS.keys(),
-        help="Run specific steps only (e.g. --steps 0 1)",
-    )
-    parser.add_argument(
-        "--skip-download",
-        action="store_true",
-        help="Skip Step 0 (use if raw data is already downloaded)",
-    )
-    return parser.parse_args()
-
-
 def main():
-    args = parse_args()
-
-    steps_to_run = sorted(args.steps) if args.steps else list(STEPS.keys())
-    if args.skip_download and 0 in steps_to_run:
-        steps_to_run.remove(0)
+    steps_to_run = list(STEPS.keys())
 
     print("\n" + "=" * 60)
     print("  CYCLISTIC — DATA PREPARATION PIPELINE")

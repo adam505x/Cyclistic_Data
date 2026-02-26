@@ -15,15 +15,6 @@ WHAT IT DOES:
   - Skips files already downloaded (safe to re-run)
   - Records download time via StepTimer
 
-TWO MODES:
-  prototype=True   Downloads 2020 only (~4M rows, 10 files).
-                   Used for Section 2: validates processing logic and records
-                   the performance baseline on a "same but smaller dataset",
-                   as required by the project brief.
-
-  prototype=False  Downloads all 3 years (~15M rows, 36 files).
-                   Used for Section 3: full dataset for MapReduce comparison.
-
 NOTE ON SCHEMA CHANGE:
   Divvy changed their CSV column names in April 2020. The Q1 2020 file uses
   the old schema. Step 1 normalises both schemas before concatenating.
@@ -58,11 +49,7 @@ FILES_2021_2022 = [
     for m in range(1, 13)
 ]
 
-# Prototype: 2020 only
-ALL_FILES_PROTOTYPE = Q1_2020 + FILES_2020
-
-# Full: all three years
-ALL_FILES_FULL = Q1_2020 + FILES_2020 + FILES_2021_2022
+ALL_FILES = Q1_2020 + FILES_2020 + FILES_2021_2022
 
 
 # ── Helpers ────────────────────────────────────────────────────────────────────
@@ -107,16 +94,10 @@ def extract_zip(zip_path: str, dest_dir: str):
 
 # ── Main entry point ───────────────────────────────────────────────────────────
 
-def run(prototype: bool = False):
-    """
-    Args:
-        prototype: If True, download 2020 only (~4M rows) for Section 2 baseline.
-                   If False, download all 3 years (~15M rows) for Section 3.
-    """
+def run():
     os.makedirs(RAW_DIR, exist_ok=True)
-    files = ALL_FILES_PROTOTYPE if prototype else ALL_FILES_FULL
-    mode_label = "PROTOTYPE — 2020 only" if prototype else "FULL — 2020-2022"
-    print(f"\n=== STEP 0: Download & Extract | {mode_label} | {len(files)} files ===")
+    files = ALL_FILES
+    print(f"\n=== STEP 0: Download & Extract | {len(files)} files ===")
 
     with StepTimer("step0_download"):
         for filename in files:
@@ -130,4 +111,4 @@ def run(prototype: bool = False):
 
 
 if __name__ == "__main__":
-    run(prototype="--full" not in sys.argv)
+    run()
