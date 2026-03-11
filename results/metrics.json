@@ -1,10 +1,10 @@
 {
   "step0_download": {
-    "elapsed_seconds": 226.6743,
-    "peak_memory_delta_mb": 42.83
+    "elapsed_seconds": 508.1837,
+    "peak_memory_delta_mb": 0.0
   },
   "step1_load_combine": {
-    "elapsed_seconds": 70.0519,
-    "peak_memory_delta_mb": 4456.29
+    "elapsed_seconds": 138.827,
+    "peak_memory_delta_mb": 3581.58
   }
 }
