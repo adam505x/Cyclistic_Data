@@ -1,6 +1,6 @@
 """
-utils/metrics.py
-----------------
+pipeline/metrics.py
+-------------------
 Reusable utilities for measuring and recording execution time and memory
 usage for each pipeline step.
 
