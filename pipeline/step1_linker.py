@@ -1,12 +1,10 @@
 """Step 1: load raw CSVs, normalise columns, and combine into one file."""
 
 import os
-import sys
 import glob
 import pandas as pd
 
-sys.path.insert(0, os.path.join(os.path.dirname(__file__), ".."))
-from utils.metrics import StepTimer
+from .metrics import StepTimer
 
 # ── Paths ──────────────────────────────────────────────────────────────────────
 
