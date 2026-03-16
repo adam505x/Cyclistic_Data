@@ -1,6 +1,6 @@
 """
-run.py
--------
+pipeline/run.py
+---------------
 Data preparation entry point for the Cyclistic Big Data project.
 Cross-platform: works on Linux, macOS, and Windows.
 
@@ -10,8 +10,8 @@ RESPONSIBILITY:
   notebooks maintained by other team members.
 
 USAGE:
-    python run.py                   # Run full pipeline (2020-2022)
-    
+    python pipeline/run.py              # Run full pipeline (2020-2022)
+
 STEPS:
     0 - Download & extract raw data from AWS S3
     1 - Link all CSVs into one combined file
@@ -21,7 +21,7 @@ import sys
 import os
 import time
 
-sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 from pipeline import step0_download, step1_linker
 

@@ -24,12 +24,10 @@ NOTE ON SCHEMA CHANGE:
 """
 
 import os
-import sys
 import zipfile
 import requests
 
-sys.path.insert(0, os.path.join(os.path.dirname(__file__), ".."))
-from utils.metrics import StepTimer
+from .metrics import StepTimer
 
 # ── Configuration ─────────────────────────────────────────────────────────────
 
