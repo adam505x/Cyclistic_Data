@@ -1,7 +1,12 @@
 {
     "python_analysis": {
-        "total_execution_time_seconds": 1.45,
+        "total_execution_time_seconds": 1.44,
         "total_execution_time_formatted": "0m 1s",
-        "memory_usage_mb": 196.14
+        "memory_usage_mb": 441.96
+    },
+    "pandas_full": {
+        "total_execution_time_seconds": 146.79,
+        "total_execution_time_formatted": "2m 26s",
+        "memory_usage_mb": 4253.58
     }
 }
