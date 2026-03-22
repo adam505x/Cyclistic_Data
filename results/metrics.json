@@ -14,30 +14,41 @@
     },
     "pandas_prototype": {
         "steps": {
-            "load_preprocess": 0.8002,
-            "row_count_quality": 0.045,
-            "rides_by_member_type": 0.025,
-            "rides_by_bike_type": 0.0228,
-            "avg_duration_by_member": 0.0841,
-            "popular_routes_mapreduce_1": 0.2204,
-            "busiest_stations_mapreduce_2": 0.1181,
-            "weather_routes_mapreduce_3": 0.5064
+            "load_preprocess": 0.3925,
+            "row_count_quality": 0.0186,
+            "rides_by_member_type": 0.0101,
+            "rides_by_bike_type": 0.0099,
+            "avg_duration_by_member": 0.0335,
+            "popular_routes_mapreduce_1": 0.0467,
+            "busiest_stations_mapreduce_2": 0.0356,
+            "weather_routes_mapreduce_3": 0.0981
         },
-        "total_execution_time_seconds": 2.11,
-        "memory_usage_mb": 169.08
+        "total_execution_time_seconds": 0.72,
+        "memory_usage_mb": 222.45
     },
     "sql_prototype": {
         "steps": {
-            "load_ingest": 3.3847,
-            "row_count_quality": 0.1159,
-            "rides_by_member_type": 0.1086,
-            "rides_by_bike_type": 0.1072,
-            "avg_duration_by_member": 0.3794,
-            "popular_routes_mapreduce_1": 0.3575,
-            "busiest_stations_mapreduce_2": 0.2438,
-            "weather_routes_mapreduce_3": 0.5064
+            "load_ingest": 1.7557,
+            "row_count_quality": 0.0552,
+            "rides_by_member_type": 0.0665,
+            "rides_by_bike_type": 0.0477,
+            "avg_duration_by_member": 0.1445,
+            "popular_routes_mapreduce_1": 0.1068,
+            "busiest_stations_mapreduce_2": 0.1211,
+            "weather_routes_mapreduce_3": 0.2434
         },
-        "total_execution_time_seconds": 5.41,
-        "memory_usage_mb": 180.48
+        "total_execution_time_seconds": 2.62,
+        "memory_usage_mb": 229.0
+    },
+    "pandas_prototype_last_run": "2026-03-22T17:54:09.429755",
+    "sql_prototype_last_run": "2026-03-22T17:54:09.429755",
+    "spark_analysis_last_run": "2026-03-22T17:54:09.429755",
+    "spark_analysis": {
+        "total_execution_time_seconds": 43.0915949344635,
+        "candidates": {
+            "popular_routes": 8.583904027938843,
+            "busiest_stations": 6.069839000701904,
+            "weather_routes": 14.838675022125244
+        }
     }
 }
