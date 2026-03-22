@@ -4,3 +4,5 @@ matplotlib
 python-dotenv
 psutil
 requests
+pymysql
+sqlalchemy

@@ -4,9 +4,38 @@
         "total_execution_time_formatted": "0m 1s",
         "memory_usage_mb": 441.96
     },
-    "pandas_full": {
-        "total_execution_time_seconds": 146.79,
-        "total_execution_time_formatted": "2m 26s",
-        "memory_usage_mb": 4253.58
+    "step0_download": {
+        "elapsed_seconds": 278.6607,
+        "peak_memory_delta_mb": 2.87
+    },
+    "step1_load_combine": {
+        "elapsed_seconds": 368.6181,
+        "peak_memory_delta_mb": 1799.18
+    },
+    "pandas_prototype": {
+        "steps": {
+            "load_preprocess": 0.77,
+            "row_count_quality": 0.054,
+            "rides_by_member_type": 0.0297,
+            "rides_by_bike_type": 0.0231,
+            "avg_duration_by_member": 0.0635,
+            "popular_routes_mapreduce_1": 0.1993,
+            "busiest_stations_mapreduce_2": 0.0653
+        },
+        "total_execution_time_seconds": 1.41,
+        "memory_usage_mb": 182.48
+    },
+    "sql_prototype": {
+        "steps": {
+            "load_ingest": 3.9041,
+            "row_count_quality": 0.1839,
+            "rides_by_member_type": 0.1942,
+            "rides_by_bike_type": 0.2185,
+            "avg_duration_by_member": 0.4829,
+            "popular_routes_mapreduce_1": 0.349,
+            "busiest_stations_mapreduce_2": 0.4095
+        },
+        "total_execution_time_seconds": 5.97,
+        "memory_usage_mb": 178.64
     }
 }
